@@ -1,5 +1,5 @@
 -- version info
-CREATE TABLE config
+CREATE TABLE _config
 (
 version varchar(3) DEFAULT '1.0'
 );
