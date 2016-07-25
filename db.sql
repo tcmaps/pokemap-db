@@ -34,12 +34,12 @@ CREATE TABLE spawns -- spawn points
 (
 cell_id BIGINT UNSIGNED , -- cell id containing this fort
 spawn_id VARCHAR(64) DEFAULT '0', -- spawn point id
-pos_s2 BIGINT UNSIGNED , -- s2 level 30 cell id as single value coordinate
+pos_s2 BIGINT UNSIGNED, -- s2 level 30 cell id as single value coordinate
 pos_lat DOUBLE, -- wgs84 latitude coordinate stored in iee754 standard
 pos_long DOUBLE, -- wgs84 longtitude coordinate stored in iee754 standard
-static_spawner SMALLINT UNSIGNED , -- is this spawn spawning always the same pokemon? 0 if not
-spawn_time_base TIME DEFAULT 0,
-spawn_time_offset TIME DEFAULT 0,
-spawn_time_dur TIME DEFAULT 0,
+static_spawner SMALLINT UNSIGNED, -- is this spawn spawning always the same pokemon? 0 if not
+spawn_time_base TIME DEFAULT 0, -- the minutes after a full hour the spawn spawns
+spawn_time_offset TIME DEFAULT 0, -- minutes until respawn (30,60...180?)
+spawn_time_dur TIME DEFAULT 0, -- spawn duration aka time_till_hidden
 last_scan TIMESTAMP -- last scan/update time of this data
 );
