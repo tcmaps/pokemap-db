@@ -1,2 +1,2 @@
 # pokemap-db
-database standard for Pokemon™ Go map data
+database model for pogo map objects
